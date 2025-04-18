@@ -50,6 +50,19 @@ struct LoginView: View {
                     Text(loginMessage)
                         .foregroundColor(.red)
                 }
+                
+                HStack {
+                    Text("Don't have an account?")
+                        .foregroundColor(.gray)
+                        .padding(.top, 4)
+                    NavigationLink(destination: SignUpView()) {
+                        Text("Sign Up")
+                            .padding(.top, 4)
+                            .foregroundColor(.blue)
+                            .fontWeight(.bold)
+                            .underline()
+                    }
+                }
             }
             .navigationDestination(isPresented: $isLoggedIn) {
                 HomeView()
