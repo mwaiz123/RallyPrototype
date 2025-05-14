@@ -94,6 +94,8 @@
 			);
 			mainGroup = B3B3F21D2DA8057A00AC7877;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B3B3F2272DA8057A00AC7877 /* Products */;
 			projectDirPath = "";
@@ -254,7 +256,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RallyPrototype/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Rally needs access to your location in order to plan trips with your friends!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Rally needs access to your location in order to plan safe and fun trips!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -283,7 +285,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RallyPrototype/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Rally needs access to your location in order to plan trips with your friends!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Rally needs access to your location in order to plan safe and fun trips!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

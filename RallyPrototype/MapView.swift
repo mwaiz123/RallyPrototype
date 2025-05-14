@@ -6,12 +6,27 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapView: View {
+    let locationManager = CLLocationManager()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+                Map(initialPosition: .camera(MapCamera(
+                    centerCoordinate: CLLocationCoordinate2D(latitude: 43.651070, longitude: -79.389015),
+                    distance: 150000)))
+            
+                .onAppear {
+                    locationManager.requestWhenInUseAuthorization()
+                }
+            
+                .ignoresSafeArea()
+        }
+        .navigationBarHidden(true)
     }
 }
+        
 
 #Preview {
     MapView()

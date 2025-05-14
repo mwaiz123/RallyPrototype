@@ -6,34 +6,30 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct HomeView: View {
-    
     @State private var showSheet: Bool = false
+    let locationManager = CLLocationManager()
+    
     var body: some View {
-        TabView {
-            ForEach(Tab.allCases, id: \.rawValue) { tab in
-                Text(tab.rawValue)
-                    .tag(tab)
-                    .tabItem {
-                        Image(systemName: tab.symbol)
-                        Text(tab.rawValue)
+        NavigationStack {
+            MapView()
+                .task {
+                    showSheet = true
+                }
+                .sheet(isPresented: $showSheet, content: {
+                    VStack {
+                        Text("Placeholder")
                     }
-            }
-        }
-        .task {
-            showSheet = true
-        }
-        .sheet(isPresented: $showSheet) {
-            VStack (alignment: .leading, spacing: nil, content: {
-                
-            })
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .presentationDetents([.height(60), .medium, .large])
-            .presentationCornerRadius(20)
-            .presentationBackground(.regularMaterial)
-            .presentationBackground(.enabled(upThrough: .large))
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .presentationDetents([.height(280), .medium, .large])
+                    .presentationCornerRadius(28)
+                    .presentationBackground(.white)
+                    .presentationBackgroundInteraction(.enabled(upThrough: .large))
+                    .interactiveDismissDisabled(true)
+                })
         }
     }
 }

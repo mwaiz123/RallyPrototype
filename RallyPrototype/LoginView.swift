@@ -1,3 +1,10 @@
+//
+//  LoginView.swift
+//  RallyPrototype
+//
+//  Created by Mansib Waiz on 2025-04-10.
+//
+
 import SwiftUI
 
 struct LoginView: View {
@@ -68,7 +75,6 @@ struct LoginView: View {
                 HomeView()
             }
         }
-        .navigationBarBackButtonHidden(true)
     }
 
     func authenticate(username: String, password: String) {
