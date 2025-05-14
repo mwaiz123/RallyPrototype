@@ -33,7 +33,7 @@ struct HomeView: View {
                         Text("Create Event")
                             .font(.title)
                             .padding(.vertical, 20)
-                            .frame(maxWidth: .infinity) // Full-width button
+                            .frame(maxWidth: .infinity)
                             .background(RoundedRectangle(cornerRadius: 20).fill(Color.purple))
                             .foregroundColor(.white)
                     }
