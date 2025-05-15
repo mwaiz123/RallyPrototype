@@ -14,16 +14,10 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            Map(position: $position) {
-                
-            }
-            .mapControls {
-                MapUserLocationButton()
-                MapPitchToggle()
-            }
-            .onAppear {
-                CLLocationManager().requestWhenInUseAuthorization()
-            }
+            MapView()
+        }
+        .navigationBarHidden(true)
+        
             .task {
                 showSheet = true
             }
@@ -51,9 +45,7 @@ struct HomeView: View {
                 .interactiveDismissDisabled(true)
             })
         }
-        .navigationBarHidden(true)
     }
-}
 
 #Preview {
     HomeView()
