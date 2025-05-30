@@ -131,3 +131,4 @@ struct EventCreationView: View {
 #Preview {
     EventCreationView()
 }
+
