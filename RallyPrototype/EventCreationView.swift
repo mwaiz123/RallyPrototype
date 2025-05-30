@@ -102,6 +102,15 @@ struct EventCreationView: View {
                         .padding(.top)
                         Spacer()
                     }
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(Color.purple, lineWidth: 2))
+                    )
+                    .padding(.horizontal)
                 }
                 .navigationBarBackButtonHidden(true)
                 .navigationBarHidden(true)
